@@ -1,2 +1,0 @@
-module SittersHelper
-end

@@ -107,21 +107,21 @@
   }
 
   function FactoryFunction($resource) {
-    return $resource("http://localhost:3000/sitters/:id");
+      return $resource("https://fetch-backend.herokuapp.com/sitters/:id");
   }
 
   function FactoryPetFunc($resource) {
-    return $resource("http://localhost:3000/owners/:owner_id/pets/:id", {}, {
+    return $resource("https://fetch-backend.herokuapp.com/owners/:owner_id/pets/:id", {}, {
       update: { method: "PUT" }
     });
   }
 
   function FactoryOwnerFunction($resource) {
-    return $resource("http://localhost:3000/pets/all_pets");
+    return $resource("https://fetch-backend.herokuapp.com/pets/all_pets");
   }
 
   function FactoryOwnerShowFunction($resource) {
-    return $resource("http://localhost:3000/owners/:id");
+    return $resource("https://fetch-backend.herokuapp.com/owners/:id");
   }
 
   function PetSittersControllerFunction(PetSitterFactory) {
